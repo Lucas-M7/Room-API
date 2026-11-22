@@ -11,7 +11,7 @@ public class RoomConfiguration : IEntityTypeConfiguration<Room>
         builder.ToTable("rooms");
         builder.HasKey(r => r.Id);
 
-        builder.Property(r => r.Name).IsRequired().HasMaxLength(30);
+        builder.Property(r => r.Name).IsRequired().HasMaxLength(Room.NameMaxLength);
         builder.Property(r => r.Capacity).IsRequired();
 
         builder.HasIndex(r => r.Name).IsUnique();
