@@ -13,7 +13,5 @@ public class RoomConfiguration : IEntityTypeConfiguration<Room>
 
         builder.Property(r => r.Name).IsRequired().HasMaxLength(Room.NameMaxLength);
         builder.Property(r => r.Capacity).IsRequired();
-
-        builder.HasIndex(r => r.Name).IsUnique();
     }
 }

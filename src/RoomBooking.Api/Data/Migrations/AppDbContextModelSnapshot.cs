@@ -90,9 +90,6 @@ namespace RoomBooking.Api.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Name")
-                        .IsUnique();
-
                     b.ToTable("rooms", (string)null);
                 });
 
